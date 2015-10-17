@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -14,13 +15,12 @@ public class VetorTest {
 
     }
 
-    @Test
-    public void showIfNumberisEven(){
-        assertThat(vetor.numberOrganizer(2), is("even"));
-    }
 
     @Test
-    public void showIfNumberisOdd(){
-        assertThat(vetor.numberOrganizer(3), is("odd"));
+    public void organizerNumbers(){
+        vetor.numberOrganizer();
+        vetor.print();
     }
+
+
 }

@@ -2,14 +2,16 @@ import java.util.Random;
 
 public class Vetor {
     private int vetorNumber[];
+    private  int vetorNumberOrganizer[];
 
 
     public Vetor() {
         this.vetorNumber = new int[10];
-        geraNUmero();
+        this.vetorNumberOrganizer = new int[10];
+        generateNumber();
     }
 
-    private void geraNUmero(){
+    private void generateNumber(){
         Random ramdomNumber = new Random();
         for (int i = 0; i < 10; i++) {
             this.vetorNumber[i] = ramdomNumber.nextInt(20);
@@ -18,13 +20,31 @@ public class Vetor {
     }
 
 
-    public String numberOrganizer(int number){
+    public void numberOrganizer(){
+        int countEven = 0;
+        int countOdd = 9;
 
-        if (number % 2 == 0){
-            return  "even";
+        for (int i = 0; i < 10; i++) {
+            int value = vetorNumber[i];
+
+            if(value % 2 == 0){
+                vetorNumber[countEven] = value;
+                countEven++;
+            }else{
+
+                vetorNumber[countOdd] = value;
+                countOdd--;
+            }
         }
 
-        return "odd";
+    }
+
+    public void print() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Vetor Position" + i + "value is: " + this.vetorNumber[i]);
+
+        }
+
     }
 
 
