@@ -16,4 +16,17 @@ public class Vetor {
         }
 
     }
+
+
+    public String numberOrganizer(){
+
+        return "even";
+    }
+
+
+
+
+
+
+
 }
