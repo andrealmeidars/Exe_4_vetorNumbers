@@ -18,9 +18,13 @@ public class Vetor {
     }
 
 
-    public String numberOrganizer(){
+    public String numberOrganizer(int number){
 
-        return "even";
+        if (number % 2 == 0){
+            return  "even";
+        }
+
+        return "odd";
     }
 
 

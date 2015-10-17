@@ -16,6 +16,6 @@ public class VetorTest {
 
     @Test
     public void showIfNumberisEven(){
-        assertThat(vetor.numberOrganizer(), is("even"));
+        assertThat(vetor.numberOrganizer(2), is("even"));
     }
 }
